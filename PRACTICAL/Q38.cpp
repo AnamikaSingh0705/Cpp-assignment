@@ -1,17 +1,12 @@
 #include <iostream>
 using namespace std;
 
+inline int sum(int a, int b) {
+    return a + b;
+}
+
 int main() {
-    int a, b;
-    cout << "Enter two numbers: ";
-    cin >> a >> b;
-
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
-
-    cout << "GCD is: " << a << endl;
+    int x = 7, y = 8;
+    cout << "Sum = " << sum(x, y) << endl;
     return 0;
 }

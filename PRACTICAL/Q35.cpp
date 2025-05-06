@@ -1,23 +1,22 @@
 #include <iostream>
 using namespace std;
 
+void doubleArray(int (&arr)[5]) {
+    for (int i = 0; i < 5; i++) {
+        arr[i] *= 2;
+    }
+}
+
 int main() {
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
+    int myArray[5] = {1, 2, 3, 4, 5};
 
-    int arr[n];
-    cout << "Enter " << n << " elements: ";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+    doubleArray(myArray);
+
+    cout << "Modified array: ";
+    for (int i = 0; i < 5; i++) {
+        cout << myArray[i] << " ";
     }
+    cout << endl;
 
-    int largest = arr[0];
-    for (int i = 1; i < n; i++) {
-        if (arr[i] > largest)
-            largest = arr[i];
-    }
-
-    cout << "Largest number is: " << largest << endl;
     return 0;
 }

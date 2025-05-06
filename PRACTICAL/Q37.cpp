@@ -1,22 +1,12 @@
 #include <iostream>
 using namespace std;
 
+inline int cube(int x) {
+    return x * x * x;
+}
+
 int main() {
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
-
-    int arr[n];
-    double sum = 0;
-
-    cout << "Enter " << n << " numbers: ";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-        sum += arr[i];
-    }
-
-    double average = sum / n;
-    cout << "Average = " << average << endl;
-
+    int num = 3;
+    cout << "Cube = " << cube(num) << endl;
     return 0;
 }

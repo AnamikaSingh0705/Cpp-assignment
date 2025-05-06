@@ -1,18 +1,14 @@
 #include <iostream>
 using namespace std;
 
+template <typename T>
+T maxValue(T a, T b) {
+    return (a > b) ? a : b;
+}
+
 int main() {
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
-
-    int arr[n], sum = 0;
-    cout << "Enter " << n << " elements: ";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-        sum += arr[i];
-    }
-
-    cout << "Sum of array elements: " << sum << endl;
+    cout << "Max of 3 and 7: " << maxValue(3, 7) << endl;
+    cout << "Max of 5.5 and 2.3: " << maxValue(5.5, 2.3) << endl;
+    cout << "Max of 'a' and 'z': " << maxValue('a', 'z') << endl;
     return 0;
 }

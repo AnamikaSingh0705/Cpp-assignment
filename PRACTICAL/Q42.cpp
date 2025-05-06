@@ -1,23 +1,16 @@
 #include <iostream>
 using namespace std;
 
+int max(int a, int b) {
+    return (a > b) ? a : b;
+}
+
+int max(int a, int b, int c) {
+    return max(max(a, b), c);
+}
+
 int main() {
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
-
-    int arr[n];
-    cout << "Enter " << n << " elements: ";
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    int smallest = arr[0];
-    for (int i = 1; i < n; i++) {
-        if (arr[i] < smallest)
-            smallest = arr[i];
-    }
-
-    cout << "Smallest number is: " << smallest << endl;
+    cout << "Max of 3 and 7: " << max(3, 7) << endl;
+    cout << "Max of 10, 5, and 8: " << max(10, 5, 8) << endl;
     return 0;
 }

@@ -1,18 +1,16 @@
 #include <iostream>
 using namespace std;
 
+const double PI = 3.14159;
+
+double areaOfCircle(double radius) {
+    return PI * radius * radius;
+}
+
 int main() {
-    int num, reversed = 0;
-
-    cout << "Enter a number: ";
-    cin >> num;
-
-    while (num != 0) {
-        int digit = num % 10;
-        reversed = reversed * 10 + digit;
-        num /= 10;
-    }
-
-    cout << "Reversed number: " << reversed << endl;
+    double r;
+    cout << "Enter radius: ";
+    cin >> r;
+    cout << "Area = " << areaOfCircle(r) << endl;
     return 0;
 }

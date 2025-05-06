@@ -1,17 +1,20 @@
 #include <iostream>
 using namespace std;
 
+// Function prototype
+int maxOfThree(int a, int b, int c);
+
 int main() {
-    int n;
-    unsigned long long factorial = 1;
-
-    cout << "Enter a number: ";
-    cin >> n;
-
-    for (int i = 1; i <= n; i++) {
-        factorial *= i;
-    }
-
-    cout << "Factorial of " << n << " is " << factorial << endl;
+    int x = 10, y = 20, z = 15;
+    cout << "Maximum: " << maxOfThree(x, y, z) << endl;
     return 0;
+}
+
+int maxOfThree(int a, int b, int c) {
+    if (a >= b && a >= c)
+        return a;
+    else if (b >= c)
+        return b;
+    else
+        return c;
 }

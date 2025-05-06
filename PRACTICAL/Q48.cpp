@@ -1,23 +1,17 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
+int add(int a, int b) { return a + b; }
+int subtract(int a, int b) { return a - b; }
+int multiply(int a, int b) { return a * b; }
+
 int main() {
-    int num, original, sum = 0;
-    cout << "Enter a number: ";
-    cin >> num;
+    int (*operations[3])(int, int) = { add, subtract, multiply };
 
-    original = num;
-    while (num != 0) {
-        int digit = num % 10;
-        sum += digit * digit * digit;
-        num /= 10;
-    }
-
-    if (sum == original)
-        cout << original << " is an Armstrong number." << endl;
-    else
-        cout << original << " is not an Armstrong number." << endl;
+    int x = 10, y = 5;
+    cout << "Add: " << operations[0](x, y) << endl;
+    cout << "Subtract: " << operations[1](x, y) << endl;
+    cout << "Multiply: " << operations[2](x, y) << endl;
 
     return 0;
 }

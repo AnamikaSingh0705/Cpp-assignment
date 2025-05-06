@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
+void incrementByTen(int &n) {
+    n += 10;
+}
+
 int main() {
-    int sum = 0;
-
-    for (int i = 2; i <= 100; i += 2) {
-        sum += i;
-    }
-
-    cout << "Sum of even numbers from 1 to 100: " << sum << endl;
+    int value = 15;
+    incrementByTen(value);
+    cout << "Value after increment: " << value << endl;
     return 0;
 }

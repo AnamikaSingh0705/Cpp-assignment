@@ -1,19 +1,13 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
+double power(double base, int exponent = 2) {
+    return pow(base, exponent);
+}
+
 int main() {
-    int num, sum = 0;
-
-    cout << "Enter a number: ";
-    cin >> num;
-
-    num = abs(num);  // Optional: handle negative input
-
-    while (num != 0) {
-        sum += num % 10;
-        num /= 10;
-    }
-
-    cout << "Sum of digits = " << sum << endl;
+    cout << "5^2 = " << power(5) << endl;
+    cout << "3^4 = " << power(3, 4) << endl;
     return 0;
 }

@@ -1,17 +1,13 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
+double compoundInterest(double principal, double rate = 5.0, int time = 2) {
+    return principal * pow((1 + rate / 100), time);
+}
+
 int main() {
-    int rows;
-    cout << "Enter number of rows: ";
-    cin >> rows;
-
-    for (int i = 1; i <= rows; i++) {
-        for (int j = 1; j <= i; j++) {
-            cout << "* ";
-        }
-        cout << endl;
-    }
-
+    cout << "Compound Interest = " << compoundInterest(1000) << endl;
+    cout << "Custom CI = " << compoundInterest(1000, 7.5, 3) << endl;
     return 0;
 }

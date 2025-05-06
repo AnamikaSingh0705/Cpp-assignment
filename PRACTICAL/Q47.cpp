@@ -1,16 +1,14 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
+int factorial(int n) {
+    if (n <= 1)
+        return 1;
+    return n * factorial(n - 1);
+}
+
 int main() {
-    string str, reversed = "";
-    cout << "Enter a string: ";
-    cin >> str;
-
-    for (int i = str.length() - 1; i >= 0; i--) {
-        reversed += str[i];
-    }
-
-    cout << "Reversed string: " << reversed << endl;
+    int num = 5;
+    cout << "Factorial of " << num << " is " << factorial(num) << endl;
     return 0;
 }

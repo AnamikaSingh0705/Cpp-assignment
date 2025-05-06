@@ -1,28 +1,12 @@
 #include <iostream>
 using namespace std;
 
+int multiply(int a, int b) {
+    return a * b;
+}
+
 int main() {
-    int num, i;
-    bool isPrime = true;
-
-    cout << "Enter a number: ";
-    cin >> num;
-
-    if (num <= 1) {
-        isPrime = false;
-    } else {
-        for (i = 2; i <= num / 2; i++) {
-            if (num % i == 0) {
-                isPrime = false;
-                break;
-            }
-        }
-    }
-
-    if (isPrime)
-        cout << num << " is a prime number." << endl;
-    else
-        cout << num << " is not a prime number." << endl;
-
+    int x = 4, y = 5;
+    cout << "Product = " << multiply(x, y) << endl;
     return 0;
 }
